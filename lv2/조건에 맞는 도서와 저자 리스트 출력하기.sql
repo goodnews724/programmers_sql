@@ -1,0 +1,13 @@
+-- 코드를 입력하세요
+SELECT 
+    b.BOOK_ID,
+    a.AUTHOR_NAME,
+    LEFT(b.PUBLISHED_DATE, 10)
+FROM
+    BOOK b
+JOIN 
+    AUTHOR a ON a.AUTHOR_ID = b.AUTHOR_ID
+WHERE
+    b.CATEGORY LIKE '%경제%'
+ORDER BY
+    b.PUBLISHED_DATE;
