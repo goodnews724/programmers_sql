@@ -1,0 +1,11 @@
+-- FISH_INFO 테이블에서
+-- 잡은 BASS와 SNAPPER의 수를 출력
+
+SELECT
+    COUNT(*) as FISH_COUNT
+FROM
+    FISH_INFO i
+JOIN
+    FISH_NAME_INFO ni on i.FISH_TYPE = ni.FISH_TYPE
+WHERE
+    ni.FISH_NAME in ('BASS', 'SNAPPER');
